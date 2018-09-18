@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
+
+                <form method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Song ID</label>
+                        <input type="text" class="form-control" id="customerId" name="customerId" aria-describedby="emailHelp" placeholder="Enter Song ID">
+                        <small id="emailHelp" class="form-text text-muted">We always ensure your data is fully protected</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                <br>
+                <h1> Your song is:</h1>
+                {% for item in output %}
+                    {% for record in item %}
+                        <li>{{record}}</li>
+                    {% endfor %}
+                {% endfor %}
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="col-lg-4">
+    </div>
+
+    </div>
+
+
+    <!-- end:Main Form -->
+
+
+
+{% endblock %}
